@@ -2,7 +2,7 @@
   "adapters": {
     "segment": {
       "enabled": true,
-      "writeKey": "7I6cUFRpJj4hjNeEjVApPvyf30uzKkw0",
+      "writeKey": "",
       "options": {}
     }
   },

@@ -1,4 +1,4 @@
-# elliot-test
+# Elliot Test
 
 > Test the Elliot package.
 
