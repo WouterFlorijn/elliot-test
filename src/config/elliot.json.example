@@ -2,8 +2,34 @@
   "adapters": {
     "segment": {
       "enabled": true,
-      "writeKey": "",
+      "writeKey": "SEGMENT_WRITE_KEY",
       "options": {}
+    },
+    "segmentServer": {
+      "enabled": true,
+      "writeKey": "SEGMENT_WRITE_KEY",
+      "options": {}
+    },
+    "googleAnalytics": {
+      "enabled": true,
+      "trackerName": "GA_TRACKER_NAME",
+      "trackingId": "GA_TRACKING_ID",
+      "currency": "EUR"
+    },
+    "intercom": {
+      "enabled": true,
+      "appId": "INTERCOM_APP_ID"
+    },
+    "keen": {
+      "enabled": true,
+      "projectId": "KEEN_PROJECT_ID",
+      "writeKey": "KEEN_WRITE_KEY",
+      "cookieName": "KEEN_COOKIE_NAME"
+    },
+    "matomo": {
+      "enabled": true,
+      "url": "MATOMO_URL",
+      "siteId": "MATOMO_SITE_ID"
     }
   },
   "debug": true
