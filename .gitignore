@@ -13,5 +13,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-config/
+src/config/
 ~elliot.example.json
