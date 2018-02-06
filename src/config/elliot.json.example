@@ -1,36 +1,80 @@
 {
+  // This configuration object is used as a basis for all adapters. Keys can be overridden by adapter configurations.
+  "baseAdapter": {
+    // Same options as other adapters (see example adapter below).
+  },
+  // List any adapters you would like to use in this object.
   "adapters": {
+    // Example adapter (don't use).
+    "example": {
+      "enabled": true,
+      "allowedMethods": ["identify", "track", "group"],
+      "allowedEvents": ["Click Button", "Post Comment"],
+      "allowedUserProperties": ["email", "address"],
+      "custom": {
+        // Adapter-specific configuration.
+      }
+    },
+    // Segment.
     "segment": {
-      "enabled": true,
-      "writeKey": "SEGMENT_WRITE_KEY",
-      "options": {}
+      "custom": {
+        "writeKey": "SEGMENT_WRITE_KEY",
+        "options": {}
+      }
     },
+    // Segment (server implementation).
     "segmentServer": {
-      "enabled": true,
-      "writeKey": "SEGMENT_WRITE_KEY",
-      "options": {}
+      "custom": {
+        "writeKey": "SEGMENT_WRITE_KEY",
+        "options": {}
+      }
     },
+    // Google Analytics.
     "googleAnalytics": {
-      "enabled": true,
-      "trackerName": "GA_TRACKER_NAME",
-      "trackingId": "GA_TRACKING_ID",
-      "currency": "EUR"
+      "custom": {
+        "trackerName": "GA_TRACKER_NAME",
+        "trackingId": "GA_TRACKING_ID",
+        "currency": "EUR",
+        "searchEventName": "search"
+      }
     },
+    // Google Tag Manager.
+    "googleTagManager": {
+      "custom": {
+        "containerId": "GTM_CONTAINER_ID",
+        "trackingId": "GA_TRACKING_ID",
+        "pageEventName": "page_view"
+      }
+    },
+    // Intercom.
     "intercom": {
-      "enabled": true,
-      "appId": "INTERCOM_APP_ID"
+      "custom": {
+        "appId": "INTERCOM_APP_ID",
+        "pageEventName": "page",
+        "searchEventName": "search",
+        "goalEventName": "goal",
+        "groupKeyName": "company"
+      }
     },
+    // Keen.
     "keen": {
-      "enabled": true,
-      "projectId": "KEEN_PROJECT_ID",
-      "writeKey": "KEEN_WRITE_KEY",
-      "cookieName": "KEEN_COOKIE_NAME"
+      "custom": {
+        "projectId": "KEEN_PROJECT_ID",
+        "writeKey": "KEEN_WRITE_KEY",
+        "cookieName": "KEEN_COOKIE_NAME",
+        "pageEventName": "pageview",
+        "searchEventName": "search",
+        "goalEventName": "goal"
+      }
     },
+    // Matomo.
     "matomo": {
-      "enabled": true,
-      "url": "MATOMO_URL",
-      "siteId": "MATOMO_SITE_ID"
+      "custom": {
+        "url": "MATOMO_URL",
+        "siteId": "MATOMO_SITE_ID"
+      }
     }
   },
+  // Enable debugging (some console logs).
   "debug": true
 }
