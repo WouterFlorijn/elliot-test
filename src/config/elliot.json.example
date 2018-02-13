@@ -1,37 +1,37 @@
 {
-  // This configuration object is used as a basis for all adapters. Keys can be overridden by adapter configurations.
-  "baseAdapter": {
-    // Same options as other adapters (see example adapter below).
+  // This configuration object is used as a basis for all integrations. Keys can be overridden by adapter configurations.
+  "globalConfig": {
+    // Same options as other integrations (see example adapter below).
   },
-  // List any adapters you would like to use in this object.
-  "adapters": {
+  // List any integrations you would like to use in this object.
+  "integrations": {
     // Example adapter (don't use).
     "example": {
       "enabled": true,
       "allowedMethods": ["identify", "track", "group"],
       "allowedEvents": ["Click Button", "Post Comment"],
       "allowedUserProperties": ["email", "address"],
-      "custom": {
+      "settings": {
         // Adapter-specific configuration.
       }
     },
     // Segment.
     "segment": {
-      "custom": {
+      "settings": {
         "writeKey": "SEGMENT_WRITE_KEY",
         "options": {}
       }
     },
     // Segment (server implementation).
     "segmentServer": {
-      "custom": {
+      "settings": {
         "writeKey": "SEGMENT_WRITE_KEY",
         "options": {}
       }
     },
     // Google Analytics.
     "googleAnalytics": {
-      "custom": {
+      "settings": {
         "trackerName": "GA_TRACKER_NAME",
         "trackingId": "GA_TRACKING_ID",
         "currency": "EUR",
@@ -40,7 +40,7 @@
     },
     // Google Tag Manager.
     "googleTagManager": {
-      "custom": {
+      "settings": {
         "containerId": "GTM_CONTAINER_ID",
         "trackingId": "GA_TRACKING_ID",
         "pageEventName": "page_view"
@@ -48,7 +48,7 @@
     },
     // Intercom.
     "intercom": {
-      "custom": {
+      "settings": {
         "appId": "INTERCOM_APP_ID",
         "pageEventName": "page",
         "searchEventName": "search",
@@ -58,7 +58,7 @@
     },
     // Keen.
     "keen": {
-      "custom": {
+      "settings": {
         "projectId": "KEEN_PROJECT_ID",
         "writeKey": "KEEN_WRITE_KEY",
         "cookieName": "KEEN_COOKIE_NAME",
@@ -69,7 +69,7 @@
     },
     // Matomo.
     "matomo": {
-      "custom": {
+      "settings": {
         "url": "MATOMO_URL",
         "siteId": "MATOMO_SITE_ID"
       }

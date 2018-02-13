@@ -11,10 +11,10 @@
     </section>
     <section class="section">
       <div class="block">
-        <h3 class="title is-size-4">Toggle adapters</h3>
+        <h3 class="title is-size-4">Toggle integrations</h3>
 
         <div class="buttons">
-          <adapter-button v-for="(adapter, key) in adapters" :key="key" :adapter="adapter">{{ key }}</adapter-button>
+          <integration-button v-for="(integration, key) in integrations" :key="key" :integration="integration">{{ key }}</integration-button>
         </div>
 
         <hr>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import AdapterButton from './ui/AdapterButton'
+import IntegrationButton from './ui/IntegrationButton'
 import IdentifyEvent from './ui/events/IdentifyEvent'
 import TrackEvent from './ui/events/TrackEvent'
 import PageEvent from './ui/events/PageEvent'
@@ -46,14 +46,14 @@ import GoalEvent from './ui/events/GoalEvent'
 export default {
   data () {
     return {
-      adapters: []
+      integrations: []
     }
   },
   mounted () {
-    this.adapters = window.tracker.adapters
+    this.integrations = window.tracker.integrations
   },
   components: {
-    AdapterButton,
+    IntegrationButton,
     IdentifyEvent,
     TrackEvent,
     PageEvent,

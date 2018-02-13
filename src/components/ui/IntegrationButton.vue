@@ -1,5 +1,5 @@
 <template>
-  <elliot-button :color="adapter.config.enabled ? 'success' : 'danger'" @click.native="toggle">
+  <elliot-button :color="integration.config.enabled ? 'success' : 'danger'" @click.native="toggle">
     <slot></slot>
   </elliot-button>
 </template>
@@ -9,17 +9,17 @@ import ElliotButton from './ElliotButton'
 
 export default {
   props: {
-    adapter: {
+    integration: {
       type: Object,
       required: true
     }
   },
   methods: {
     toggle () {
-      if (this.adapter.config.enabled) {
-        this.adapter.disable()
+      if (this.integration.config.enabled) {
+        this.integration.disable()
       } else {
-        this.adapter.enable()
+        this.integration.enable()
       }
     }
   },
