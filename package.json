@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "bulma": "^0.6.2",
-    "elliot-analytics": "^0.0.23",
+    "elliot-analytics": "^0.0.26",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

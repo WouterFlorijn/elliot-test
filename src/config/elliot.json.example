@@ -50,10 +50,8 @@
     "intercom": {
       "settings": {
         "appId": "INTERCOM_APP_ID",
-        "pageEventName": "page",
         "searchEventName": "search",
-        "goalEventName": "goal",
-        "groupKeyName": "company"
+        "goalEventName": "goal"
       }
     },
     // Keen.

@@ -29,7 +29,7 @@ export default {
   methods: {
     send () {
       const userProperties = JSON.parse(this.userProperties) || {}
-      window.tracker.identify(this.userId, userProperties)
+      window.tracker.identify(this.userId || null, userProperties)
     }
   },
   components: {
