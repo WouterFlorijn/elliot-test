@@ -18,4 +18,4 @@ npm run build
 npm run build --report
 ```
 
-Copy `src/config/elliot.json.example` to `src/config/elliot.json` and edit.
+Copy `src/config/elliot.example.js` to `src/config/elliot.js` and edit.

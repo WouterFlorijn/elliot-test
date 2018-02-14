@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import config from './config/elliot.json'
+import config from './config/elliot.js'
 import { Tracker } from 'elliot-analytics/dist/elliot'
 
 export default {
