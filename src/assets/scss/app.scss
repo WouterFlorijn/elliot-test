@@ -1,1 +1,7 @@
-@import '~bulma/bulma'
+@import '~bulma/bulma';
+
+.is-json {
+  font-family: Consolas, 'Courier new';
+  min-height: 8em;
+  resize: vertical;
+}

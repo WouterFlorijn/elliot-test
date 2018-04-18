@@ -10,7 +10,7 @@
     <div class="field">
       <label class="label">Traits</label>
       <div class="control">
-        <textarea class="input" rows="4" v-model="traits"></textarea>
+        <textarea class="input is-json" rows="4" v-model="traits"></textarea>
       </div>
     </div>
 

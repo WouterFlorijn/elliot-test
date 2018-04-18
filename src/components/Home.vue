@@ -46,7 +46,7 @@ import GoalEvent from './ui/events/GoalEvent'
 export default {
   data () {
     return {
-      integrations: []
+      integrations: {}
     }
   },
   mounted () {
