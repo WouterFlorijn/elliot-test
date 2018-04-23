@@ -11,6 +11,12 @@
     </section>
     <section class="section">
       <div class="block">
+        <elliot-button :color="config.debug ? 'success' : 'danger'" @click.native="config.debug = !config.debug">
+          Debug mode
+        </elliot-button>
+
+        <hr>
+
         <h3 class="title is-size-4">Toggle integrations</h3>
 
         <div class="buttons">
@@ -34,6 +40,7 @@
 </template>
 
 <script>
+import ElliotButton from './ui/ElliotButton'
 import IntegrationButton from './ui/IntegrationButton'
 import IdentifyEvent from './ui/events/IdentifyEvent'
 import TrackEvent from './ui/events/TrackEvent'
@@ -46,13 +53,16 @@ import GoalEvent from './ui/events/GoalEvent'
 export default {
   data () {
     return {
-      integrations: {}
+      integrations: {},
+      config: {}
     }
   },
   mounted () {
     this.integrations = window.tracker.integrations
+    this.config = window.tracker.config
   },
   components: {
+    ElliotButton,
     IntegrationButton,
     IdentifyEvent,
     TrackEvent,
